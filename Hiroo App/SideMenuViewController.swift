@@ -1,22 +1,7 @@
-//
-//  MenuViewController.swift
-//  Hiroo App
-//
-//  Created by 井上　希稟 on 2025/09/03.
-//
-
-// MenuViewController.swift
-//
-//  MenuViewController.swift
-//  Hiroo App
-//
-//  Created by XX on 2025/09/03.
-//
-
 import UIKit
 
 final class SideMenuViewController: UITableViewController {
-    private let items = ["学校選択に戻る"]
+    private let items = ["学校選択に戻る", "イベント一覧", "設定"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +27,20 @@ final class SideMenuViewController: UITableViewController {
         let selectedItem = items[indexPath.row]
         
         switch selectedItem {
-        case "学校選択に戻る":
+        case "Back to Home Screen":
             self.presentingViewController?.dismiss(animated: true, completion: { [weak self] in
                 self?.routeToSelectSchool()
             })
-//        case "イベント一覧":
-//            print("イベント一覧 tapped")
-//            
-//        case "設定":
-//            print("設定 tapped")
+        case "School Flooring":
+            self.presentingViewController?.dismiss(animated: true, completion: {
+                if let nav = UIApplication.shared.windows.first?.rootViewController as? UINavigationController {
+                    let schoolVC = SchoolsViewController()
+                    nav.pushViewController(schoolVC, animated: true)
+                }
+            })
+
+        case "設定":
+            print("設定 tapped")
             
         default:
             break
