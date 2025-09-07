@@ -40,5 +40,6 @@
 "fav" = "Favorite";
 "nofav" = "Remove from favorites?";
 "remove" = "Remove";
-
-
+"back" = "Back to School Selection";
+"schoolmap" = "Campus Map";
+"web" = "Website";
