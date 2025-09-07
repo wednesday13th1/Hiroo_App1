@@ -36,7 +36,7 @@ class SelectSchoolViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "広尾"
+        label.text = NSLocalizedString("hiroo", comment: "")
         label.font = UIFont.systemFont(ofSize: 64, weight: .heavy)
         label.textColor = .black
         label.textAlignment = .center
@@ -45,13 +45,13 @@ class SelectSchoolViewController: UIViewController {
     }()
     
     private let gakuenButton = GameMenuButton(
-        title: "広尾学園",
+        title: NSLocalizedString("hg", comment: ""),
         color: UIColor(red: 0.75, green: 0.95, blue: 0.75, alpha: 1.0),
         icon: "graduationcap.fill"
     )
     
     private let koishikawaButton = GameMenuButton(
-        title: "広尾小石川",
+        title: NSLocalizedString("hgk", comment: ""),
         color: UIColor(red: 0.65, green: 0.85, blue: 0.65, alpha: 1.0),
         icon: "building.columns.fill"
     )
