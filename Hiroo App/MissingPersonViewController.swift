@@ -21,7 +21,9 @@ class MissingPersonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 239/255, green: 252/255, blue: 239/255, alpha: 1)
+        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         setupUI()
     }
 
@@ -60,16 +62,16 @@ class MissingPersonViewController: UIViewController {
         }
 
         // プレースホルダー設定
-        nameTextField.placeholder = "迷子の名前/ lost person's name"
-        ageTextField.placeholder = "年齢/ lost person's age"
-        clothesTextField.placeholder = "服装/ clothing"
-        lastSeenTextField.placeholder = "最後に見かけた場所/ last seen location"
-        reporterTextField.placeholder = "探している人の名前/ person searching"
-        foundNameTextField.placeholder = "発見された迷子の名前/ found lost person's name"
-        foundLocationTextField.placeholder = "見つかった場所/ where they are found"
+        nameTextField.placeholder = NSLocalizedString("lostname", comment: "")
+        ageTextField.placeholder = NSLocalizedString("lostage", comment: "")
+        clothesTextField.placeholder = NSLocalizedString("lostclothing", comment: "")
+        lastSeenTextField.placeholder = NSLocalizedString("lastseen", comment: "")
+        reporterTextField.placeholder = NSLocalizedString("searcher", comment: "")
+        foundNameTextField.placeholder = NSLocalizedString("foundname", comment: "")
+        foundLocationTextField.placeholder = NSLocalizedString("foundplace", comment: "")
 
         // 登録ボタン設定
-        registerButton.setTitle("迷子を登録", for: .normal)
+        registerButton.setTitle(NSLocalizedString("send", comment: ""), for: .normal)
         registerButton.setTitleColor(.white, for: .normal)
         registerButton.backgroundColor = .systemBlue
         registerButton.layer.cornerRadius = 8
@@ -77,7 +79,7 @@ class MissingPersonViewController: UIViewController {
         registerButton.addTarget(self, action: #selector(registerMissingPerson), for: .touchUpInside)
 
         // 発見ボタン設定
-        foundButton.setTitle("発見情報を登録", for: .normal)
+        foundButton.setTitle(NSLocalizedString("send1", comment: ""), for: .normal)
         foundButton.setTitleColor(.white, for: .normal)
         foundButton.backgroundColor = .systemGreen
         foundButton.layer.cornerRadius = 8
@@ -139,14 +141,14 @@ class MissingPersonViewController: UIViewController {
               let clothes = clothesTextField.text, !clothes.isEmpty,
               let lastSeen = lastSeenTextField.text, !lastSeen.isEmpty,
               let reporter = reporterTextField.text, !reporter.isEmpty else {
-            print("すべての項目を入力してください")
+            print(NSLocalizedString("notfulllost", comment: ""))
             return
         }
 
-        let alert = UIAlertController(title: "迷子登録",
-                                      message: "この迷子情報を登録しますか？",
+        let alert = UIAlertController(title: NSLocalizedString("send", comment: ""),
+                                      message: NSLocalizedString("sendchecklost", comment: ""),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "はい", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .default, handler: { _ in
             let person = MissingPerson(name: name,
                                        age: age,
                                        clothes: clothes,
@@ -162,21 +164,21 @@ class MissingPersonViewController: UIViewController {
 //                }
 //            }
         }))
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("no", comment: ""), style: .cancel))
         present(alert, animated: true)
     }
 
     @objc func registerFoundPerson() {
         guard let name = foundNameTextField.text, !name.isEmpty,
               let location = foundLocationTextField.text, !location.isEmpty else {
-            print("名前と見つかった場所を入力してください")
+            print(NSLocalizedString("notfulllost", comment: ""))
             return
         }
 
-        let alert = UIAlertController(title: "発見情報登録",
-                                      message: "この情報を登録しますか？",
+        let alert = UIAlertController(title: NSLocalizedString("send1", comment: ""),
+                                      message: NSLocalizedString("sendchecklost", comment: ""),
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "はい", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .default, handler: { _ in
             let found = FoundPerson(name: name, foundLocation: location)
 
 //            FirestoreManager.shared.insertFoundPerson(found) { success in
@@ -188,7 +190,7 @@ class MissingPersonViewController: UIViewController {
 //                }
 //            }
         }))
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("no", comment: ""), style: .cancel))
         present(alert, animated: true)
     }
 }
