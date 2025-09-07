@@ -21,9 +21,7 @@ class MissingPersonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        view.backgroundColor = .systemBackground
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 239/255, green: 252/255, blue: 239/255, alpha: 1)
         setupUI()
     }
 
