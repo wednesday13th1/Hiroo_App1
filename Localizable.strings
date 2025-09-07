@@ -1,0 +1,32 @@
+
+/* Localizable.strings
+   Hiroo App
+   Created by 井上 希稟 on 2025/09/07.
+*/
+"Crowd" = "Congestion";
+"lost" = "Missing";
+"Time" = "Timetable";
+"Map" = "Access";
+"lostname" = "Lost person's name";
+"lostage" = "age";
+"lostclothing" = "clothing";
+"lastseen" = "last seen location";
+"searcher" = "name of person searching";
+"foundname" = "name of person found";
+"foundplace" = "place where you found them";
+"send" = "Add Missing Person";
+"send1" = "Report Missing Person";
+"maphiroo" = "Hiroo Gakuen";
+"mapkoishikawa" = "Hiroo Koishikawa";
+"notfulllost" = "please fill all of them";
+"sendchecklost" = "Do you want to submit?";
+"yes" = "submit";
+"no" = "cancel";
+"metrotext" = "Tokyo Metro Hibiya Line, Hiroo Station, Exit 4 (right outside)";
+"bushg" = "Toei Bus 黒77: from Meguro Station to Sendagaya Station / Nippon Red Cross Medical Center – get off at Hiroo Gakuen-mae";
+"toeitext" = "Toei Mita Line, Sengoku Station, 5 min walk from Exit A4";
+"bushgk" = "Toei Bus Route 上58: get off at Bunkyo Green Court stop, 2 min walk";
+"bt" = "This text includes a link to the Settings app.\n\nFor transportation guidance, please see this link.";
+"bt1" = "link";
+
+
