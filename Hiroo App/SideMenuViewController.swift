@@ -16,7 +16,7 @@
 import UIKit
 
 final class SideMenuViewController: UITableViewController {
-    private let items = ["学校選択に戻る", "イベント一覧", "設定"]
+    private let items = ["学校選択に戻る"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +46,11 @@ final class SideMenuViewController: UITableViewController {
             self.presentingViewController?.dismiss(animated: true, completion: { [weak self] in
                 self?.routeToSelectSchool()
             })
-        case "イベント一覧":
-            print("イベント一覧 tapped")
-            
-        case "設定":
-            print("設定 tapped")
+//        case "イベント一覧":
+//            print("イベント一覧 tapped")
+//            
+//        case "設定":
+//            print("設定 tapped")
             
         default:
             break
