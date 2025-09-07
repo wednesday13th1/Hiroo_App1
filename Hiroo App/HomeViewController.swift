@@ -130,10 +130,33 @@ class HomeViewController: UIViewController {
     
     // MARK: - Festival Buttons
     private func setupButtons() {
-        let missingButton = makeFestivalButton(title: "Missing", systemImage: "person.fill.questionmark", action: #selector(openMissing), color: .systemPink)
-        let mapButton = makeFestivalButton(title: "Map", systemImage: "map.fill", action: #selector(openMap), color: .systemBlue)
-        let congestionButton = makeFestivalButton(title: "Congestion", systemImage: "car.fill", action: #selector(openCongestion), color: .systemOrange)
-        let timetableButton = makeFestivalButton(title: "TimeTable", systemImage: "calendar", action: #selector(openTimetable), color: .systemGreen)
+        let missingButton = makeFestivalButton(
+            title: NSLocalizedString("lost", comment: ""),
+            systemImage: "person.fill.questionmark",
+            action: #selector(openMissing),
+            color: .systemPink
+        )
+
+        let mapButton = makeFestivalButton(
+            title: NSLocalizedString("Map", comment: ""),
+            systemImage: "map.fill",
+            action: #selector(openMap),
+            color: .systemBlue
+        )
+
+        let congestionButton = makeFestivalButton(
+            title: NSLocalizedString("Crowd", comment: ""),
+            systemImage: "car.fill",
+            action: #selector(openCongestion),
+            color: .systemOrange
+        )
+
+        let timetableButton = makeFestivalButton(
+            title: NSLocalizedString("Time", comment: ""),
+            systemImage: "calendar",
+            action: #selector(openTimetable),
+            color: .systemGreen
+        )
         
         // Grid layout (2x2)
         let grid = UIStackView(arrangedSubviews: [
