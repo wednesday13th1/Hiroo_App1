@@ -1,0 +1,29 @@
+/* Localizable.strings
+   Hiroo App
+   Created by 井上 希稟 on 2025/09/07.
+*/
+"Crowd" = "混雑状況";
+"lost" = "迷子";
+"Time" = "タイムテーブル";
+"Map" = "アクセス";
+"lostname" = "迷子の名前";
+"lostage" = "年齢";
+"lostclothing" = "服装";
+"lastseen" = "最後に見かけた場所";
+"searcher" = "探している人";
+"foundname" = "発見した迷子の名前";
+"foundplace" = "発見した場所";
+"send" = "迷子を登録";
+"send1" = "発見情報を登録";
+"maphiroo" = "広尾学園";
+"mapkoishikawa" = "広尾学園小石川";
+"notfulllost" = "すべての項目を入力してください";
+"sendchecklost" = "この迷子情報を登録しますか？";
+"yes" = "はい";
+"no" = "キャンセル";
+"metrotext" = "東京メトロ 日比谷線 広尾駅から4番出口すぐ";
+"bushg" = "都バス 黒77 目黒駅前-千駄ヶ谷駅前日赤医療センター下・広尾学園前下車すぐ";
+"toeitext" = "都営三田線 千石駅からA4出口徒歩5分";
+"bushgk" = "都バス 上58 文京グリーンコート前 バス停より徒歩2分";
+"bt" = "これは設定アプリへのリンクを含む文章です。\n\n乗車案内はこちらのリンクです";
+"bt1" = "乗車案内";
