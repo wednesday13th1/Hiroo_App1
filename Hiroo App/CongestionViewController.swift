@@ -1,11 +1,3 @@
-//
-//  CongestionViewController.swift
-//  Hiroo App
-//
-//  Created by 井上　希稟 on 2025/07/23.
-//
-
-// 混雑状況を表示するViewController
 import UIKit
 import SideMenu
 
@@ -21,7 +13,7 @@ class CongestionViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIColor(red: 239/255, green: 252/255, blue: 239/255, alpha: 1)
         
         title = "Congestion"
         titleLabel.font = .preferredFont(forTextStyle: .title2)
