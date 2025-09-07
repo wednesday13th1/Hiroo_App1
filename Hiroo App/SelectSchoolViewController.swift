@@ -45,13 +45,13 @@ class SelectSchoolViewController: UIViewController {
     }()
     
     private let gakuenButton = GameMenuButton(
-        title: NSLocalizedString("hg", comment: <#T##String#>),
+        title: NSLocalizedString("hg", comment: ""),
         color: UIColor(red: 0.75, green: 0.95, blue: 0.75, alpha: 1.0),
         icon: "graduationcap.fill"
     )
     
     private let koishikawaButton = GameMenuButton(
-        title: NSLocalizedString("hgk", comment: <#T##String#>),
+        title: NSLocalizedString("hgk", comment: ""),
         color: UIColor(red: 0.65, green: 0.85, blue: 0.65, alpha: 1.0),
         icon: "building.columns.fill"
     )
