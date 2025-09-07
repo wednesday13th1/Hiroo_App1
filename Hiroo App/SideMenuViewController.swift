@@ -16,7 +16,7 @@
 import UIKit
 
 final class SideMenuViewController: UITableViewController {
-    private let items = [NSLocalizedString("back", comment: ""), "校内マップ", "ホームページ"]
+    private let items = [NSLocalizedString("back", comment: ""), NSLocalizedString("schoolmap", comment: ""), NSLocalizedString("web", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
