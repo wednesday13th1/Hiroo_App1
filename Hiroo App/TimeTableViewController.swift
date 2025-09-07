@@ -11,7 +11,7 @@ import UserNotifications
 // MARK: - TimeTableViewController
 class TimeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let segmentedControl = UISegmentedControl(items: ["アリーナ", "サブアリーナ", "ステージ"])
+    let segmentedControl = UISegmentedControl(items: [NSLocalizedString("arena", comment: ""), NSLocalizedString("subarena", comment: ""), NSLocalizedString("stage", comment: "")])
     let tableView = UITableView()
     let redLineView = UIView()
     var redLineTimer: Timer?
@@ -201,7 +201,7 @@ class TimeTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         if events.isEmpty {
             let label = UILabel()
-            label.text = "イベントがありません"
+            label.text = NSLocalizedString("noevent", comment: "")
             label.textAlignment = .center
             tableView.backgroundView = label
         } else {
@@ -211,8 +211,8 @@ class TimeTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     func scheduleNotification(for event: Event) {
         let content = UNMutableNotificationContent()
-        content.title = "イベントのお知らせ"
-        content.body = "\(event.name) がもうすぐ始まります！"
+        content.title = NSLocalizedString("eventwarn", comment: "")
+        content.body = "\(event.name) " + NSLocalizedString("start", comment: "")
         content.sound = .default
 
         let triggerDate = event.startTime.addingTimeInterval(-600) // 10分前
@@ -366,7 +366,7 @@ class FavoritesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "お気に入り"
+        title = NSLocalizedString("fav", comment: "")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
@@ -386,9 +386,9 @@ class FavoritesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let event = favoriteEvents[indexPath.row]
 
-        let alert = UIAlertController(title: "お気に入りを解除しますか？", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
-        alert.addAction(UIAlertAction(title: "解除", style: .destructive, handler: { _ in
+        let alert = UIAlertController(title: NSLocalizedString("nofav", comment: ""), message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("no", comment: ""), style: .cancel))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("remove", comment: ""), style: .destructive, handler: { _ in
             self.favoriteEvents.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             self.onUnstar?(event)
