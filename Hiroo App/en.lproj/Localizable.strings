@@ -1,3 +1,4 @@
+
 /* Localizable.strings
    Hiroo App
    Created by 井上 希稟 on 2025/09/07.
@@ -27,3 +28,17 @@
 "bushgk" = "Toei Bus Route 上58: get off at Bunkyo Green Court stop, 2 min walk";
 "bt" = "This text includes a link to the Settings app.\n\nFor transportation guidance, please see this link.";
 "bt1" = "link";
+"hg" = "Hiroo Gakuen";
+"hgk" = "Hiroo Koishikawa";
+"hiroo" = "Hiroo";
+"arena" = "Arena";
+"subarena" = "Sub Arena";
+"stage" = "Stage";
+"noevent" = "No events available";
+"eventwarn" = "Event Notice";
+"start" = "is about to start!";
+"fav" = "Favorite";
+"nofav" = "Remove from favorites?";
+"remove" = "Remove";
+
+
