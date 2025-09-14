@@ -12,7 +12,7 @@
 //
 //  Created by XX on 2025/09/03.
 //
-
+import SideMenu
 import UIKit
 
     final class SideMenuViewController: UITableViewController {

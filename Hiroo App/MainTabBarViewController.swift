@@ -1,4 +1,5 @@
 import UIKit
+import SideMenu
 
 class MainTabBarViewController: UITabBarController {
     
@@ -32,3 +33,4 @@ class MainTabBarViewController: UITabBarController {
         ]
     }
 }
+
